@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Auto-Key Cryptography Activity</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+<div class="container">
+
+<h2>Auto-Key Cryptography Practice</h2>
+
+<div class="instructions">
+<h3>Instructions</h3>
+<p>
+1. Enter a message using CAPITAL LETTERS only.<br>
+2. Enter ONE letter as the key.<br>
+3. Solve Encryption using: <b>(P + K) mod 26</b><br>
+4. Then solve Decryption using: <b>(C − K) mod 26</b><br>
+5. Use the Alphabet Panel to find the number of each letter.
+</p>
+</div>
+
+<input type="text" id="message" placeholder="Example: HELLO">
+<input type="text" id="key" maxlength="1" placeholder="One letter key">
+
+<button onclick="start()">Start</button>
+
+<div id="game" style="display:none">
+
+<h3 id="mode">Encryption</h3>
+<h3>Step <span id="step"></span></h3>
+
+<p>Letter 1: <b id="letter1"></b></p>
+<p>Letter 2: <b id="letter2"></b></p>
+
+<p id="formula"></p>
+
+<input type="text" id="answer" maxlength="1" placeholder="Your Answer">
+
+<button onclick="check()">Submit</button>
+
+<p id="feedback"></p>
+
+</div>
+
+<h3>Ciphertext:</h3>
+<p id="cipherResult"></p>
+
+<h3>Decrypted Text:</h3>
+<p id="plainResult"></p>
+
+</div>
+
+<!-- Alphabet Panel -->
+
+<div class="alphabetPanel">
+
+<h3>Alphabet Reference</h3>
+
+<table class="alphabetTable">
+
+<tr>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td>R</td>
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
